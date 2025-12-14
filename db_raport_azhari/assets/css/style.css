@@ -1,0 +1,281 @@
+/* db_raport_azhari/assets/css/style.css 
+ * Theme: Elegance & Modern Islamic Boarding School
+ */
+
+:root {
+    --color-primary: #004d40;      /* Biru Tua/Hijau Teal Gelap (Akademis/Islami) */
+    --color-secondary: #ffc107;    /* Kuning Emas/Cerah (Azhari) */
+    --color-background: #f8f9fa;   /* Abu-abu Sangat Terang */
+    --color-light: #ffffff;
+    --color-dark: #343a40;         /* Hitam/Teks Gelap */
+    --color-success: #28a745;
+    --color-danger: #dc3545;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--color-background);
+    margin: 0;
+    padding: 0;
+    color: var(--color-dark);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    background: var(--color-light);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* --- HEADER & LOGO --- */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--color-primary);
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-placeholder {
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-secondary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    color: var(--color-light);
+    font-weight: bold;
+    border: 3px solid var(--color-primary);
+}
+
+.header h2 {
+    color: var(--color-primary);
+    margin: 0;
+    font-weight: 600;
+}
+
+.header a {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.header a:hover {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+}
+
+/* --- FORMS & INPUTS --- */
+
+.form-section h3, h3 {
+    color: var(--color-primary);
+    border-left: 5px solid var(--color-secondary);
+    padding-left: 10px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--color-dark);
+}
+.form-group input[type="text"], 
+.form-group input[type="password"], 
+.form-group input[type="number"], 
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+.form-group input:focus, 
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+    outline: none;
+}
+
+button[type="submit"], .btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+button[type="submit"]:hover, .btn-primary:hover {
+    background-color: #003630;
+}
+
+/* --- TABLES --- */
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: var(--color-light);
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    overflow: hidden; /* Penting untuk border-radius */
+}
+.data-table th, .data-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #dee2e6;
+}
+.data-table th {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.data-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+.data-table tr:hover {
+    background-color: #e9ecef;
+}
+
+/* --- MESSAGES & INFO BOXES --- */
+
+.success-message {
+    background-color: #d4edda;
+    color: var(--color-success);
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #c3e6cb;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.error-message, .warning-message {
+    background-color: #f8d7da;
+    color: var(--color-danger);
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #f5c6cb;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.info-ta {
+    background-color: #e0f7fa;
+    color: var(--color-primary);
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #b2ebf2;
+    border-left: 5px solid var(--color-primary);
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+/* --- ACTION BUTTONS --- */
+
+.data-table td a {
+    color: var(--color-primary);
+    text-decoration: none;
+    margin-right: 10px;
+    transition: color 0.2s;
+}
+.data-table td a:hover {
+    color: var(--color-secondary);
+}
+
+.btn-print {
+    background-color: var(--color-success);
+    color: var(--color-light);
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    display: inline-block;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+.btn-print:hover {
+    background-color: #1e7e34;
+}
+
+/* --- OVERRIDES KHUSUS UNTUK HALAMAN LOGIN (index.php) --- */
+
+/* 1. Atur Body/Background Utama */
+.login-body {
+    background: var(--color-dark); /* Fallback color */
+    background-image: url('../imG/FOTO.jpg'); /* Ganti dengan path foto Anda */
+    background-size: cover; /* Pastikan foto menutupi seluruh layar */
+    background-position: center; /* Posisikan di tengah */
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Pusatkan horizontal */
+    align-items: center; /* Pusatkan vertikal */
+}
+
+/* 2. Style Kotak Login */
+.login-container {
+    max-width: 400px;
+    width: 90%;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.95); /* Putih transparan sedikit */
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* Shadow yang lebih kuat */
+    text-align: center;
+    backdrop-filter: blur(5px); /* Efek blur pada latar belakang konten (modern) */
+    -webkit-backdrop-filter: blur(5px);
+}
+
+/* Penyesuaian agar logo selalu di tengah (override dari style.css umum) */
+.login-container .logo-section {
+    justify-content: center; /* Penting: agar logo dan judul rata tengah */
+    display: flex;
+    flex-direction: column; /* Tumpuk logo di atas judul */
+    align-items: center;
+    margin-bottom: 25px; /* Tambahkan sedikit ruang di bawah logo/judul */
+}
+
+/* Atur jarak antara logo dan teks judul */
+.login-container .logo-section h2 {
+    margin-top: 15px; /* Jarak antara logo dan teks */
+    margin-bottom: 0;
+}
+.login-container h2 {
+    color: var(--color-primary);
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+/* Override input untuk tampilan lebih kompak di login */
+.login-container .form-group input {
+    border: 1px solid #ccc;
+    background-color: var(--color-light);
+}
+
+.login-container button[type="submit"] {
+    width: 100%;
+    margin-top: 10px;
+}
